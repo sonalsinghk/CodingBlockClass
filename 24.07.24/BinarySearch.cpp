@@ -1,3 +1,5 @@
+Binary Search Algorithm-------
+    
 #include<iostream>
 using namespace std;
 int binarySearch(int a[], int n, int key){
