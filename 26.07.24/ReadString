@@ -1,0 +1,52 @@
+Classic-------
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str[10];
+    cin.getline(str,10);
+    cout<<str;
+    return 0;
+}
+A method------
+#include<iostream>
+#include<string.h>
+using namespace std;
+void readString(char str[]){
+    char ch;
+    ch = cin.get();
+    int i=0;
+    while(ch!='\n'){
+        cout<<i<<"charachter"<<ch;
+        ch=cin.get();
+        i++;
+    }
+}
+int main(){
+    char str[10];
+    readString(str,100);
+    return 0;
+}
+Official Method------
+#include<iostream>
+#include<string.h>
+using namespace std;
+void readString(char str[], int sz, char delimiter='\n'){
+    char ch;
+    ch = cin.get();
+    int indx=0;
+    while(ch!=delimiter && indx<sz-1){
+        str[indx] = ch;
+        ch=cin.get();
+        indx++;
+    }
+    str[indx]='\0';
+}
+int main(){
+    char str[10];
+    readString(str,100);
+    cout<<str;
+    // cin.getline(str,10);
+    // cout<<str;
+    return 0;
+}
