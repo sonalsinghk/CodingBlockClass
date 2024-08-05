@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+bool ispalindrom(char *arr){
+ 
+    int fi = 0;
+    int li = strlen(arr)-1;
+
+    while(fi<li){
+        if(arr[fi]!=arr[li]){
+            return false;
+        }
+        li--;
+        fi++;
+    }
+    return true;   
+}
+int main(){
+    char arr[]="baba";
+    if(ispalindrom(arr)){
+        cout<<"Palindrom"<<endl;
+    }
+    else{
+        cout<<"Not a Palindrom"<<endl;
+    }
+    return 0;
+}
