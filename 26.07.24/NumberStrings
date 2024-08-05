@@ -1,0 +1,13 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    int n;
+    char ch[10];
+    cin>>n;
+    cin.ignore();     //number ke baad wale space na le
+    cin.getline(ch,10);
+    cout<<n<<endl;
+    cout<<ch<<endl;
+    return 0;
+}
