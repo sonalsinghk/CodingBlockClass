@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
+//T.C.: O(N*K)
 void rotate(char *a){
    int lena = strlen(a);
    char ch = a[lena-1];
@@ -11,6 +12,7 @@ void rotate(char *a){
    }
    a[0]=ch;
 }
+//T.C. : O(N+K)
 void rotate2(char *a, int k){
     int len = strlen(a);
     //1. moving all charachter k times from the last
