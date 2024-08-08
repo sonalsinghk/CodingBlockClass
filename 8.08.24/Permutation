@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char a[] = "abab";
+    char b[] = "baba";
+    int freq[26]={0};     //counting the number of times charachter occurs
+
+    for(int i=0;i<strlen(a);i++){
+        int indx = (a[i]-'a');
+        freq[indx]++;
+    }
+    for(int i=0;i<strlen(b);i++){
+        int indx = (b[i]-'a');
+        freq[indx]--;
+    }
+    bool isPermutation = true;
+    for(int i=0;i<26;i++){
+        if(freq[i]!=0){
+            isPermutation = false;
+        }
+    }
+    if(isPermutation){
+        cout<<"Permutaion hai"<<endl;
+    }
+    else{
+        cout<<"Permutation ni h"<<endl;
+    }
+
+    return 0;
+}
