@@ -1,0 +1,44 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+void rotate(char *a){
+   int lena = strlen(a);
+   char ch = a[lena-1];
+   int i = lena-2;
+   while(i>=0){
+    a[i+1]=a[i];
+    i--;
+   }
+   a[0]=ch;
+}
+void rotate2(char *a, int k){
+    int len = strlen(a);
+    //1. moving all charachter k times from the last
+    int i= len-1;
+    while(i>=0){
+         a[i+k] = a[i];
+         i--;
+    }
+    //2. Move the charachters rotated ahead
+    int j=0;
+    i = len-1;
+    while(j<k){
+         a[j]=a[i];
+         i++;
+         j++;
+    }
+
+    a[len] = '\0';
+}
+int main(){
+    char a[7] = "Coding";
+    int k;
+    cout<<"Enter k";
+    cin>>k;
+    rotate2(a,k);
+    // for(int i=0;i<k;i++){
+    //     rotate(a);
+    // }
+    cout<<a<<endl;
+    return 0;
+}
