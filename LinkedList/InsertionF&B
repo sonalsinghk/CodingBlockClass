@@ -10,14 +10,14 @@ class node{
       }
 };
 void insertAtEnd(node* &head, node* &tail, int d){
-     if(head == NULL){
-        node* n = new node(d);
-        head = tail = n;
+     if(head == NULL){                //jab ll khaali hogi iska matlab pehli node ban rhi h data ke sath
+        node* n = new node(d);        
+        head = tail = n;              //yeh pehli node h toh head aur tail dono yehi hogi
      }
      else{
-        node* n = new node(d);
-        tail->next = n;
-        tail = n;
+        node* n = new node(d);        //dusri nayi node ban gyi
+        tail->next = n;               //yeh operation tail ko next node se link kar rha
+        tail = n;                     // abh yeh last node ban gyi
      }
 }
 void insertAtFront(node* &head, node* &tail, int d){
